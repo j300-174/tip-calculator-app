@@ -1,16 +1,54 @@
 /* mobile (global styles) */
+/* 
+  OTHER COLORS:
+    active hover state color:
+    color: hsl(172, 67%, 45%);
+
+    input dollar color
+    color: hsl(184, 14%, 56%);
+
+  background-color: hsl(172, 67%, 45%);
+  background-color: hsl(183, 100%, 15%);
+  background-color: hsl(189, 41%, 97%);
+  background-color: hsl(0, 0%, 100%);
+
+  background-color: hsl(172, 67%, 45%);
+  background-color: hsl(183, 100%, 15%);
+  background-color: hsl(186, 14%, 43%);
+  background-color: hsl(184, 14%, 56%);
+  background-color: hsl(189, 41%, 97%);
+  background-color: hsl(0, 0%, 100%);
+*/
+
+/* 
+  - Weights: 400, 500, 700
+  400: person
+  500: h2
+  700: Custom/ numbers...?
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  color: hsl(186, 14%, 43%);
+  background-color: hsl(185, 41%, 84%);
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  /* form input: */
+  /* font-size: 24px */
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media (min-width: 480px) {
-    /* Medium screens */
+  /* Medium screens */
 }
 
 @media (min-width: 800px) {
-    /* Wide screens */
+  /* Wide screens */
 }
 
 @media (min-width: 1100px) {
-    /* XL screens */
+  /* XL screens */
 }
