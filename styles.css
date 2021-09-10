@@ -1,5 +1,8 @@
 /* mobile (global styles) */
 /* 
+  BEM:
+  block__element--modifier
+/* 
   OTHER COLORS:
     active hover state color:
     color: hsl(172, 67%, 45%);
@@ -40,6 +43,7 @@ body {
 
 h1 {
   font-size: 1.5rem;
+  text-align: center;
 }
 
 h2 {
@@ -79,16 +83,15 @@ ul {
   color:hsl(184, 14%, 56%)
 }
 
-/* block--modifier */
 .button--green {
   background:hsl(172, 67%, 45%)
 } 
 
-section {
+.app {
   background: hsl(0, 0%, 100%);
 }
 
-section .display, 
+.display, 
 .display__tip, 
 .display__people {
   background-color: hsl(183, 100%, 15%);
