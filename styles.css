@@ -31,11 +31,67 @@ body {
   margin: 0;
   padding: 0;
   color: hsl(186, 14%, 43%);
-  background-color: hsl(185, 41%, 84%);
+  background: hsl(185, 41%, 84%);
   font-family: 'Space Mono', monospace;
-  font-weight: 400;
+  /* font-weight: 400; */
   /* form input: */
   /* font-size: 24px */
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 0.75rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.label {
+  display: block;
+}
+
+.field {
+  background:hsl(189, 41%, 97%);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+/* ^ATOMIC ELEMENTS^ */
+
+.button {
+  background: hsl(183, 100%, 15%);
+  width: 75px;
+  font-size: 20px;
+  color:hsl(0, 0%, 100%)
+}
+
+.button--field {
+  background:hsl(189, 41%, 97%);
+  color:hsl(184, 14%, 56%)
+}
+
+/* block--modifier */
+.button--green {
+  background:hsl(172, 67%, 45%)
+} 
+
+section {
+  background: hsl(0, 0%, 100%);
+}
+
+section .display, 
+.display__tip, 
+.display__people {
+  background-color: hsl(183, 100%, 15%);
 }
 
 .attribution { font-size: 11px; text-align: center; }

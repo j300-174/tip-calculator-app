@@ -8,7 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <!-- process domain, load resource quicker before browser request -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 
@@ -26,50 +26,53 @@
   <!-- ^ <h1> -->
   <!-- blue background -->
   <h1 style="text-align:center">SPLI<br>TTER</h1>
-  <section>
+  <section class="app">
     <!-- section1 -->
     <!-- white background -->
-    <section>
+    <section class="form">
+      <!-- block w/in a block -->
       <!-- section2 -->
       <!-- contains bill, tip & people -->
-      <section class="bill">
-        <h2>Bill</h2>
-        <!-- input box here -->
+      <!-- <h2 class="form_header">Bill</h2> -->
+      <label class="label" for="bill">Bill</label>
+      <input class="field" id="bill" type="text">
+      <section class="form__tip">
+
+        <label for="tip">Select Tip</label>
+        <!-- <h2>Select Tip %</h2> -->
+        <ul>
+          <li><input class="button" type="button" value="5%"></li>
+          <li><input class="button" type="button" value="10%"></li>
+          <li><input class="button" type="button" value="15%"></li>
+          <li><input class="button" type="button" value="25%"></li>
+          <li><input class="button" type="button" value="50%"></li>
+          <li><input class="button button--field" type="input" value="Custom"></li>
+        </ul>
       </section>
-      <section class="tip">
-        <h2>Select Tip %</h2>
-        <ol>
-          <li>5%</li>
-          <li>10%</li>
-          <li>15%</li>
-          <li>25%</li>
-          <li>50%</li>
-          <li>Custom</li>
-        </ol>
+      <section class="form__people">
+        <label class="label" for="people">Number of People</label>
+        <input class="field" id="people" type="text">
       </section>
-      <section class="people">
-        <h2>Number of People</h2>
-        <!-- input box here.. -->
-      </section>   
     </section>
 
-    <section>
+    <section class="display">
       <!-- flex column -->
-      <section>
+      <section class="display__tip">
         <!-- flex grid -->
         <h2>Tip Amount</h2>
         <h3>/ person</h3>
         <!-- input $ -->
       </section>
-
-      <section>
+      <section class="display__people">
         <!-- flex grid -->
         <h2>Total</h2>
         <h3>/ person</h3>
         <!-- input $ -->
       </section>
-
-      <button>Reset</button>
+      <!-- button not element of block for reusibility -->
+      <label for="reset"></label>
+      <input class="button button--green" id="reset" type="button" value=RESET>
+      <!-- <button class="button button-green">Reset</button> -->
     </section>
   </section>
 
