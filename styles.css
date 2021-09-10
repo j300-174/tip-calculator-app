@@ -3,4 +3,14 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-/* desktop */
+@media (min-width: 480px) {
+    /* Medium screens */
+}
+
+@media (min-width: 800px) {
+    /* Wide screens */
+}
+
+@media (min-width: 1100px) {
+    /* XL screens */
+}
