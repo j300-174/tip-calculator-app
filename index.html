@@ -1,3 +1,8 @@
+<!-- 
+  DELETE THIS AFTER SEEN & IMPLEMENTED:
+  https://www.youtube.com/watch?v=rWjntaq4FW4
+  https://www.youtube.com/watch?v=bZM9ot4ulT8
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,25 +39,30 @@
       <!-- section2 -->
       <!-- contains bill, tip & people -->
       <!-- <h2 class="form_header">Bill</h2> -->
-      <label class="label" for="bill">Bill</label>
-      <input class="field" id="bill" type="text">
+      <label class="input" for="bill">Bill</label>
+      <input class="field" id="bill" dir="rtl" type="text">
+      <img class="form__img" src="./images/icon-dollar.svg" alt="dollar icon">
+
       <section class="form__tip">
 
-        <label for="tip">Select Tip</label>
-        <!-- <h2>Select Tip %</h2> -->
+        <label for="tip">Select Tip %</label>
+
         <ul>
-          <li><input class="button" type="button" value="5%"></li>
-          <li><input class="button" type="button" value="10%"></li>
-          <li><input class="button" type="button" value="15%"></li>
-          <li><input class="button" type="button" value="25%"></li>
-          <li><input class="button" type="button" value="50%"></li>
-          <li><input class="button button--field" type="input" value="Custom"></li>
+          <li><input class="btn" type="button" value="5%"></li>
+          <li><input class="btn" type="button" value="10%"></li>
+          <li><input class="btn" type="button" value="15%"></li>
+          <li><input class="btn" type="button" value="25%"></li>
+          <li><input class="btn" type="button" value="50%"></li>
+          <li><input class="btn btn--field" type="input" value="Custom"></li>
         </ul>
+
       </section>
+
       <section class="form__people">
-        <label class="label" for="people">Number of People</label>
-        <input class="field" id="people" type="text">
+        <label class="input" for="people">Number of People</label>
+        <input class="field" id="people" dir="rtl" type="text">
       </section>
+
     </section>
 
     <section class="display">
@@ -63,6 +73,7 @@
         <h3>/ person</h3>
         <!-- input $ -->
       </section>
+
       <section class="display__people">
         <!-- flex grid -->
         <h2>Total</h2>
@@ -71,7 +82,7 @@
       </section>
       <!-- button not element of block for reusibility -->
       <label for="reset"></label>
-      <input class="button button--green" id="reset" type="button" value=RESET>
+      <input class="btn btn--green" id="reset" type="button" value=RESET>
       <!-- <button class="button button-green">Reset</button> -->
     </section>
   </section>

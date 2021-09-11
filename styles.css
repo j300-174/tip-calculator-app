@@ -2,6 +2,8 @@
 /* 
   BEM:
   block__element--modifier
+  .block-name__element-name--modifier-name
+  block-name__elem-name_mod-name_mod-val
 /* 
   OTHER COLORS:
     active hover state color:
@@ -30,10 +32,25 @@
   700: Custom/ numbers...?
 */
 
+:root {
+    /* || Neutral */
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan-1: hsl(186, 14%, 43%);
+  --dark-grayish-cyan-2: hsl(184, 14%, 56%);
+  --light-grayish-cyan-1: hsl(185, 41%, 84%);
+  --light-grayish-cyan-2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+
+  /* || Primary */
+  --strong-cyan: hsl(172, 67%, 45%);
+}
+
 body {
   margin: 0;
   padding: 0;
-  color: hsl(186, 14%, 43%);
+  color: var(--dark-grayish-cyan-1);
+  /* color: red; */
+  /* color: hsl(186, 14%, 43%); */
   background: hsl(185, 41%, 84%);
   font-family: 'Space Mono', monospace;
   /* font-weight: 400; */
@@ -58,12 +75,16 @@ ul {
   list-style-type: none;
 }
 
-.label {
+/* .form__img {
+  position: absolute;
+} */
+
+.input {
   display: block;
 }
 
 .field {
-  background:hsl(189, 41%, 97%);
+  background: var(--light-grayish-cyan-2);
   padding: 10px 20px;
   border: none;
   border-radius: 0.25rem;
@@ -71,30 +92,34 @@ ul {
 
 /* ^ATOMIC ELEMENTS^ */
 
-.button {
-  background: hsl(183, 100%, 15%);
+.btn {
+    /* var */
+  background: var(--very-dark-cyan);
+  border: none;
   width: 75px;
   font-size: 20px;
-  color:hsl(0, 0%, 100%)
+  color: var(--white)
 }
 
-.button--field {
-  background:hsl(189, 41%, 97%);
-  color:hsl(184, 14%, 56%)
+.btn--field {
+  background: var(--light-grayish-cyan-2);
+  color: var(--dark-grayish-cyan-2);
 }
 
-.button--green {
-  background:hsl(172, 67%, 45%)
+.btn--green {
+  background: var(--strong-cyan);
 } 
 
 .app {
-  background: hsl(0, 0%, 100%);
+  background: var(--white);
 }
 
 .display, 
 .display__tip, 
 .display__people {
-  background-color: hsl(183, 100%, 15%);
+    /* var */
+  background: var(--very-dark-cyan);
+  /* background-color: red; */
 }
 
 .attribution { font-size: 11px; text-align: center; }
