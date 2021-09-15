@@ -40,9 +40,13 @@
   --light-grayish-cyan-1: hsl(185, 41%, 84%);
   --light-grayish-cyan-2: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
+  --large-font-size: 24px;
+  --border-radius: 0.25rem;
 
   /* || Primary */
   --strong-cyan: hsl(172, 67%, 45%);
+
+  /* || Radius */
 }
 
 body {
@@ -85,9 +89,10 @@ ul {
 
 .field {
   background: var(--light-grayish-cyan-2);
-  padding: 10px 20px;
+  padding: 5px 20px;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
+  font-size: var(--large-font-size);
 }
 
 /* ^ATOMIC ELEMENTS^ */
@@ -96,9 +101,11 @@ ul {
     /* var */
   background: var(--very-dark-cyan);
   border: none;
-  width: 75px;
-  font-size: 20px;
-  color: var(--white)
+  padding: 5px;
+  border-radius: var(--border-radius);
+  width: 80px;
+  font-size: var(--large-font-size);
+  color: var(--white);
 }
 
 .btn--field {
@@ -114,12 +121,10 @@ ul {
   background: var(--white);
 }
 
-.display, 
-.display__tip, 
+.display,
+.display__tip,
 .display__people {
-    /* var */
   background: var(--very-dark-cyan);
-  /* background-color: red; */
 }
 
 .attribution { font-size: 11px; text-align: center; }
