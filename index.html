@@ -40,27 +40,30 @@
       <!-- contains bill, tip & people -->
       <!-- <h2 class="form_header">Bill</h2> -->
       <label class="input" for="bill">Bill</label>
+      <!-- <div> -->
       <input class="field" id="bill" dir="rtl" type="text">
-      <img class="form__img" src="./images/icon-dollar.svg" alt="dollar icon">
+      <!-- CHANGE TO BILL IMG -->
+      <img class="form__icon" src="./images/icon-dollar.svg" alt="dollar icon">
+      <!-- </div> -->
 
-      <section class="form__tip">
-
+      <!-- change this to its own block (tip) -->
+      <section class="tip">
         <label for="tip">Select Tip %</label>
-
         <ul>
-          <li><input class="btn" type="button" value="5%"></li>
-          <li><input class="btn" type="button" value="10%"></li>
-          <li><input class="btn" type="button" value="15%"></li>
-          <li><input class="btn" type="button" value="25%"></li>
-          <li><input class="btn" type="button" value="50%"></li>
-          <li><input class="btn btn--field" type="input" value="Custom"></li>
+          <li><input id="tip" class="btn" type="button" value="5%"></li>
+          <li><input id="tip" class="btn" type="button" value="10%"></li>
+          <li><input id="tip" class="btn" type="button" value="15%"></li>
+          <li><input id="tip" class="btn" type="button" value="25%"></li>
+          <li><input id="tip" class="btn" type="button" value="50%"></li>
+          <li><input id="tip" class="btn btn--field" type="input" value="Custom"></li>
         </ul>
-
       </section>
 
-      <section class="form__people">
+      <!-- people block -->
+      <section class="people">
         <label class="input" for="people">Number of People</label>
         <input class="field" id="people" dir="rtl" type="text">
+        <img class="people__icon" src="./images/icon-person.svg" alt="person icon">
       </section>
 
     </section>
