@@ -18,16 +18,10 @@
 
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="styles.css">
-  <style>
-
-  </style>
 </head>
 
 <body>
-  <!-- SPLI TTER -->
-  <!-- ^ <h1> -->
   <!-- blue background -->
   <h1>SPLI<br>TTER</h1>
   <section class="app">
@@ -37,16 +31,12 @@
       <!-- block w/in a block -->
       <!-- section2 -->
       <!-- contains bill, tip & people -->
-      <!-- <h2 class="form_header">Bill</h2> -->
       <label class="input" for="bill">Bill</label>
-      <!-- <div> -->
       <input class="field" id="bill" dir="rtl" type="text">
-      <!-- CHANGE TO BILL IMG -->
       <img class="form__icon" src="./images/icon-dollar.svg" alt="dollar icon">
-      <!-- </div> -->
 
-      <!-- change this to its own block (tip) -->
       <section>
+        <!-- change this to its own block (tip) -->
         <label for="tip">Select Tip %</label>
 
         <ul class="tip">
@@ -69,31 +59,24 @@
     </section>
 
     <section class="display">
-      <!-- flex column -->
       <!-- display__tip should be container (display something... ) -->
       <section class="display__tip">
-        <!-- flex grid -->
         <div>
           <h2>Tip Amount</h2>
           <h3>/ person</h3>
         </div>
         <h3 class="display__value">$0.00</h3>
-        <!-- input $ -->
       </section>
 
       <section class="display__people">
-        <!-- flex grid -->
         <div>
           <h2>Total</h2>
           <h3>/ person</h3>
         </div>
         <h3 class="display__value">$0.00</h3>
-        <!-- input $ -->
       </section>
-      <!-- button not element of block for reusibility -->
       <label for="reset"></label>
       <input class="btn btn--green" id="reset" type="button" value=RESET>
-      <!-- <button class="button button-green">Reset</button> -->
     </section>
   </section>
 
