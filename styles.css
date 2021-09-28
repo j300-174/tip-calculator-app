@@ -33,33 +33,30 @@
 */
 
 :root {
-    /* || Neutral */
+  /* || Colors */
   --very-dark-cyan: hsl(183, 100%, 15%);
+  --strong-cyan: hsl(172, 67%, 45%);
   --dark-grayish-cyan-1: hsl(186, 14%, 43%);
   --dark-grayish-cyan-2: hsl(184, 14%, 56%);
   --light-grayish-cyan-1: hsl(185, 41%, 84%);
   --light-grayish-cyan-2: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
-  --large-font-size: 24px;
-  --border-radius: 0.25rem;
 
-  /* || Primary */
-  --strong-cyan: hsl(172, 67%, 45%);
+  /* || Font sizes */
+  --large-font-size: 24px;
+  --large-font-size-2: 35px;
 
   /* || Radius */
+  --border-radius: 0.25rem;
+  --border-radius-2: 0.75rem;
 }
 
 body {
+  background: hsl(185, 41%, 84%);
+  color: var(--dark-grayish-cyan-1);
+  font-family: 'Space Mono', monospace;
   margin: 0;
   padding: 0;
-  color: var(--dark-grayish-cyan-1);
-  /* color: red; */
-  /* color: hsl(186, 14%, 43%); */
-  background: hsl(185, 41%, 84%);
-  font-family: 'Space Mono', monospace;
-  /* font-weight: 400; */
-  /* form input: */
-  /* font-size: 24px */
 }
 
 h1 {
@@ -70,10 +67,14 @@ h1 {
 
 h2 {
   font-size: 1rem;
+  color: var(--light-grayish-cyan-2);
+  margin: 0;
 }
 
 h3 {
+  color: var(--dark-grayish-cyan-2);
   font-size: 0.75rem;
+  margin: 0;
 }
 
 ul {
@@ -132,11 +133,13 @@ ul {
 .btn--field {
   background: var(--light-grayish-cyan-2);
   color: var(--dark-grayish-cyan-2);
+  text-align: center;
 }
 
 .btn--green {
   background: var(--strong-cyan);
   /* margin: 10px 10px; */
+  color: var(--very-dark-cyan);
   width: 100%;
 }
 
@@ -156,7 +159,9 @@ ul {
   /* background-color: red; */
   margin: 0;
   padding: 0;
+  /* border: 0; */
   /* background: none; */
+  /* text-align: center; */
 
   /* display: flex; */
   /* grid-template-columns: 1fr 20px; */
@@ -169,10 +174,27 @@ ul {
 .display__people {
   background: var(--very-dark-cyan);
   margin: 0px 20px;
-  /* rounded corners... */
-  /* border-radius: 2.5%; */
+  border-radius: var(--border-radius-2);
   padding: 20px 20px;
-  /* ^FIX THIS  */
+}
+
+.display__tip {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 16px 0;
+}
+
+.display__people {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 16px 0px;
+}
+
+.display__value {
+  font-size: var(--large-font-size-2);
+  color: var(--strong-cyan);
 }
 
 .attribution { font-size: 11px; text-align: center; }

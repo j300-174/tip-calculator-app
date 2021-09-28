@@ -10,7 +10,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <!-- process domain, load resource quicker before browser request -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,17 +70,24 @@
 
     <section class="display">
       <!-- flex column -->
+      <!-- display__tip should be container (display something... ) -->
       <section class="display__tip">
         <!-- flex grid -->
-        <h2>Tip Amount</h2>
-        <h3>/ person</h3>
+        <div>
+          <h2>Tip Amount</h2>
+          <h3>/ person</h3>
+        </div>
+        <h3 class="display__value">$0.00</h3>
         <!-- input $ -->
       </section>
 
       <section class="display__people">
         <!-- flex grid -->
-        <h2>Total</h2>
-        <h3>/ person</h3>
+        <div>
+          <h2>Total</h2>
+          <h3>/ person</h3>
+        </div>
+        <h3 class="display__value">$0.00</h3>
         <!-- input $ -->
       </section>
       <!-- button not element of block for reusibility -->
