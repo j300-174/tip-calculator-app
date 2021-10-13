@@ -32,7 +32,7 @@
       <!-- section2 -->
       <!-- contains bill, tip & people -->
       <label class="input" for="bill">Bill</label>
-      <input class="field" id="bill" dir="rtl" type="text">
+      <input class="field" id="bill" dir="rtl" type="text" value="0">
       <img class="form__icon" src="./images/icon-dollar.svg" alt="dollar icon">
 
       <section>
@@ -52,7 +52,7 @@
       <!-- people block -->
       <section class="people">
         <label class="input" for="people">Number of People</label>
-        <input class="field" id="people" dir="rtl" type="text">
+        <input class="field" id="people" dir="rtl" type="text" value="0">
         <img class="people__icon" src="./images/icon-person.svg" alt="person icon">
       </section>
 
@@ -76,7 +76,8 @@
         <h3 class="display__value">$0.00</h3>
       </section>
       <label for="reset"></label>
-      <input class="btn btn--green" id="reset" type="button" value=RESET>
+      <!-- <input class="btn btn--green" id="reset" type="button" value=RESET> -->
+      <input class="btn btn--empty" id="reset" type="button" value=RESET>
     </section>
   </section>
 
@@ -84,6 +85,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/j300-174">Jedd Picones</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>

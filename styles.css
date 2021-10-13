@@ -1,4 +1,5 @@
 /* mobile (global styles) */
+/* todo: setup on hover colors */
 /*
   BEM:
   block__element--modifier
@@ -101,6 +102,11 @@ ul {
   margin: 0.25em auto;
   padding-right: 5%;
   width: 95%;
+  color: #9EBBBD;
+}
+
+.field:focus {
+  color: var(--very-dark-cyan);
 }
 
 .form__icon{
@@ -130,12 +136,28 @@ ul {
   color: var(--white);
 }
 
+/* .btn on hover-> turn green */
+/* background: var(--strong-cyan); */
+
 .btn--field {
   background: var(--light-grayish-cyan-2);
   color: var(--dark-grayish-cyan-2);
   text-align: center;
 }
 
+.btn--empty {
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --strong-cyan: hsl(172, 67%, 45%);
+  --dark-grayish-cyan-1: hsl(186, 14%, 43%);
+  --dark-grayish-cyan-2: hsl(184, 14%, 56%);
+  --light-grayish-cyan-1: hsl(185, 41%, 84%);
+  background: var(--dark-grayish-cyan-2);
+  /* ^ make more green... */
+  color: var(--very-dark-cyan);
+  /* ^ lighter than very dark setup dark-cyan */
+}
+
+/* make green when bill tip is displayed */
 .btn--green {
   background: var(--strong-cyan);
   /* margin: 10px 10px; */
