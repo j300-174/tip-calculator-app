@@ -144,6 +144,7 @@ ul {
 }
 
 /* NEW BUTTON (CHANGE NAME AFTER TO ^ ) */
+
 .button {
   background: var(--very-dark-cyan);
   border: none;
@@ -156,7 +157,7 @@ ul {
   color: var(--white);
 }
 
-.button:hover {
+.button--hover:hover {
   background: #26c2ad;
 }
 
