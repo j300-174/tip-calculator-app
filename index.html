@@ -33,8 +33,8 @@
       <!-- contains bill, tip & people -->
       <label class="input" for="bill">Bill</label>
       <!-- change type="number" -->
-      <input class="field" id="bill" name="bill" type="number" dir="rtl" type="text" placeholder="0" required>
-      <img class="form__icon" src="./images/icon-dollar.svg" alt="dollar icon">
+      <input class="field field__bill" id="bill" name="bill" type="text" dir="rtl" type="text" placeholder="0" required>
+      <!-- <img class="form__icon" src="./images/icon-dollar.svg" alt="dollar icon"> -->
 
       <section>
         <!-- change this to its own block (tip) -->
@@ -98,8 +98,8 @@
       <!-- people block -->
       <section class="people">
         <label class="input" for="people">Number of People</label>
-        <input class="field" id="people" dir="rtl" type="number" placeholder="0">
-        <img class="people__icon" src="./images/icon-person.svg" alt="person icon">
+        <input class="field field__people" id="people" dir="rtl" type="text" placeholder="0">
+        <!-- <img class="people__icon" src="./images/icon-person.svg" alt="person icon"> -->
       </section>
     </section>
 
@@ -112,7 +112,6 @@
         </div>
         <h3 id="tipAmount" class="display__value">0</h3>
       </section>
-
       <section class="display__people">
         <div>
           <h2>Total</h2>
@@ -132,5 +131,4 @@
   </div>
   <script src="script.js"></script>
 </body>
-
 </html>

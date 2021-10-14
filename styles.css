@@ -157,7 +157,7 @@ ul {
   color: var(--white);
 }
 
-.button--hover:hover {
+.button:hover {
   background: #26c2ad;
 }
 
@@ -217,11 +217,23 @@ ul {
   background: var(--white);
 }
 
+/* change from form__icon... */
+.field__bill {
+  background-image: url("./images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.field__people {
+  background-image: url("./images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
 .tip {
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* justify-content: space-between; */
   /* display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 5px;
@@ -297,19 +309,34 @@ ul {
     grid-column-gap: 5px;
     grid-row-gap: 15px; */
   }
-
-  .people__icon {
-    padding-top: 450px;
-  }
 }
-
 
 @media (min-width: 480px) {
   /* Medium screens */
+  .tip {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media (min-width: 800px) {
   /* Wide screens */
+  /* split form & display classes */
+  body {
+    max-width: 850px;
+    margin: 0 auto;
+    /* border-radius: 10px; */
+    /* margin: auto; */
+  }
+
+  .app {
+    display: flex;
+    border-radius: 20px;
+    /* justify-content: space-around; */
+  }
+
+  .display {
+    margin: 20px 0px;
+  }
 }
 
 @media (min-width: 1100px) {
