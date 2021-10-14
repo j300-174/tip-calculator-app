@@ -156,8 +156,14 @@ ul {
   color: var(--white);
 }
 
+.button:hover {
+  background: #26c2ad;
+}
+
+/* make as class framework... */
 .button input {
   display: none;
+  visibility: hidden;
 }
 
 .btn--input {
@@ -182,6 +188,8 @@ ul {
 }
 
 .btn--empty {
+  --light-green: #26c2ad;
+  --dark-green: #00494d;
   --very-dark-cyan: hsl(183, 100%, 15%);
   --strong-cyan: hsl(172, 67%, 45%);
   --dark-grayish-cyan-1: hsl(186, 14%, 43%);

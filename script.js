@@ -4,48 +4,60 @@
   get no. of people
 */
 
-const bill = document.getElementById('bill').value;
+// const bill = document.getElementById('bill').value;
 // console.log(bill);
 
-const ppl = document.getElementById('people').value;
+// const ppl = document.getElementById('people').value;
 // console.log(ppl);
 
-let tip = 0;
+// let tip = 0;
 
-// tip1.addEventListener('click', function(e) {
-//   console.log(`testing button clicked, value: ${tip1.value}`);
-//   tip = tip1.value;
-//   console.log(`tip value: ${tip1.value}`);
-// });
-//
-// tip2.addEventListener('click', function(e) {
-//   console.log(`testing button clicked, value: ${tip2.value}`);
-//   tip = tip2.value;
-//   console.log(`tip value: ${tip2.value}`);
-// });
-//
-// tip3.addEventListener('click', function(e) {
-//   console.log(`testing button clicked, value: ${tip3.value}`);
-//   tip = tip3.value;
-//   console.log(`tip value: ${tip3.value}`);
-// });
-//
-// tip4.addEventListener('click', function(e) {
-//   console.log(`testing button clicked, value: ${tip4.value}`);
-//   tip = tip4.value;
-//   console.log(`tip value: ${tip4.value}`);
-// });
-//
-// tip5.addEventListener('click', function(e) {
-//   console.log(`testing button clicked, value: ${tip5.value}`);
-//   tip = tip5.value;
-//   console.log(`tip value: ${tip5.value}`);
-// });
+bill.addEventListener('keyup', calculate);
+custom.addEventListener('keyup', calculate);
+people.addEventListener('keyup', calculate);
 
-// custom
-// tip6.addEventListener('click', function(e) {
-//   console.log(`testing button clicked, value: ${tip6.value}`);
-// });
+// calculate onclick on tip
+const tip = document.querySelectorAll('input[name="tip"]')
+for (let i=0; i<tip.length;i++) {
+  tip[i].onclick = () => {
+    calculate();
+  }
+}
+
+// calculate tip amount & total amount
+function calculate() {
+  // activate reset button during any user input
+  reset.style.color = 'var(--dark-green)';
+  // --light-green
+  reset.style.backgroundColor = 'var(--light-green)';
+
+  // sort out selected tip...
+  let userTip = 0;
+  let tipList = document.querySelector('input[name="tip"]');
+
+  if (custom.value) {
+    userTip = custom.value / 100;
+  }
+  else if (document.querySelector('input[name="tip"]:checked')) {
+    userTip = document.querySelector('input[name="tip"]:checked').value / 100;
+  }
+
+  const tip = bill.value * userTip;
+  const total = parseFloat(bill.value) + tip;
+
+  tipAmount.innerHTML = "$" + ((tip / people.value) * 100) / 100;
+  totalAmount.innerHTML = "$" + ((total / people.value) * 100) / 100;
+}
+
+reset.addEventListener('click', () => {
+  bill.value = null;
+  people.value = null;
+  custom.value = null;
+  tipAmount.innerHTML = "$0.00";
+  totalAmount.innerHTML = "$0.00";
+  reset.style.color = 'var(--dark-green';
+  reset.style.backgroundColor = "#0d686d";
+})
 
 // SETUP TIP AMOUNT
 

@@ -98,10 +98,9 @@
       <!-- people block -->
       <section class="people">
         <label class="input" for="people">Number of People</label>
-        <input class="field" id="people" dir="rtl" type="text" value="0">
+        <input class="field" id="people" dir="rtl" type="number" placeholder="0">
         <img class="people__icon" src="./images/icon-person.svg" alt="person icon">
       </section>
-
     </section>
 
     <section class="display">
@@ -111,7 +110,7 @@
           <h2>Tip Amount</h2>
           <h3>/ person</h3>
         </div>
-        <h3 class="display__value">$0.00</h3>
+        <h3 id="tipAmount" class="display__value">0</h3>
       </section>
 
       <section class="display__people">
@@ -119,7 +118,7 @@
           <h2>Total</h2>
           <h3>/ person</h3>
         </div>
-        <h3 class="display__value">$0.00</h3>
+        <h3 id="totalAmount" class="display__value">0</h3>
       </section>
       <label for="reset"></label>
       <!-- <input class="btn btn--green" id="reset" type="button" value=RESET> -->
