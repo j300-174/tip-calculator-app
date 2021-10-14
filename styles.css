@@ -211,7 +211,8 @@ ul {
 .tip {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-column-gap: 5px;
+  grid-row-gap: 15px;
 }
 
 .tip__btn {
