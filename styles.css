@@ -103,10 +103,16 @@ ul {
   padding-right: 5%;
   width: 95%;
   color: #9EBBBD;
+  background-repeat: no-repeat;
+  background-position: 10px center;
 }
 
-.field:focus {
-  color: var(--very-dark-cyan);
+.field__bill {
+  background-image: url("./images/icon-dollar.svg");
+}
+
+.field__people {
+  background-image: url("./images/icon-person.svg");
 }
 
 .form__icon{
@@ -216,19 +222,6 @@ ul {
 
 .app {
   background: var(--white);
-}
-
-/* change from form__icon... */
-.field__bill {
-  background-image: url("./images/icon-dollar.svg");
-  background-repeat: no-repeat;
-  background-position: 10px center;
-}
-
-.field__people {
-  background-image: url("./images/icon-person.svg");
-  background-repeat: no-repeat;
-  background-position: 10px center;
 }
 
 .tip {
