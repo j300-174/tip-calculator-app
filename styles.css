@@ -128,12 +128,46 @@ ul {
 .btn {
   background: var(--very-dark-cyan);
   border: none;
-  padding: 5px;
+  padding: 5px 60px;
+  /* padding-right: 20px; */
   border-radius: var(--border-radius);
-  width: 80px;
-  width: 100%;
+  /* width: 80px; */
+  /* width: 100%; */
   font-size: var(--large-font-size);
   color: var(--white);
+}
+
+.btn input {
+  /* visibility: hidden; */
+  display: none;
+}
+
+/* NEW BUTTON (CHANGE NAME AFTER TO ^ ) */
+
+.button {
+  background: var(--very-dark-cyan);
+  border: none;
+  padding: 5px 60px;
+  /* padding-right: 20px; */
+  border-radius: var(--border-radius);
+  /* width: 80px; */
+  /* width: 100%; */
+  font-size: var(--large-font-size);
+  color: var(--white);
+}
+
+.button input {
+  display: none;
+}
+
+.btn--input {
+  background: var(--light-grayish-cyan-2);
+  padding: 5px 0px;
+  width: 165px;
+  border: none;
+  font-size: 1.5em;
+  color: var(--dark-grayish-cyan-2);
+  text-align: center;
 }
 
 /* .btn on hover-> turn green */
@@ -143,6 +177,8 @@ ul {
   background: var(--light-grayish-cyan-2);
   color: var(--dark-grayish-cyan-2);
   text-align: center;
+  /* padding: 5px 5px; */
+  /* width: 0; */
 }
 
 .btn--empty {
@@ -151,9 +187,12 @@ ul {
   --dark-grayish-cyan-1: hsl(186, 14%, 43%);
   --dark-grayish-cyan-2: hsl(184, 14%, 56%);
   --light-grayish-cyan-1: hsl(185, 41%, 84%);
-  background: var(--dark-grayish-cyan-2);
+  /* background: var(--dark-grayish-cyan-2); */
+  background: rgb(13, 104, 109);
   /* ^ make more green... */
   color: var(--very-dark-cyan);
+  width: 100%;
+  /* align-items: center; */
   /* ^ lighter than very dark setup dark-cyan */
 }
 
@@ -172,7 +211,7 @@ ul {
 .tip {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 12px;
+  grid-gap: 20px;
 }
 
 .tip__btn {
@@ -189,6 +228,14 @@ ul {
   /* grid-template-columns: 1fr 20px; */
 
   /* flex-direction: row; */
+}
+
+.tip__btnTest {
+  background-color: green;
+  color: white;
+  /* find out what to do... */
+  font-size: 1.5em;
+  text-align: center;
 }
 
 .display,
