@@ -85,7 +85,7 @@ ul {
 
 .form {
   /* SORT PADDING HERE, BETWEEN PPL INPUT & TIP AMOUNT */
-  padding: 2em 2em;
+  padding: 20px 20px;
   /* padding: 10px 10px; */
 }
 
@@ -322,7 +322,7 @@ ul {
   /* Wide screens */
   /* split form & display classes */
   body {
-    max-width: 850px;
+    max-width: 800px;
     margin: 0 auto;
     /* border-radius: 10px; */
     /* margin: auto; */
