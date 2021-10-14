@@ -122,7 +122,8 @@ ul {
   left: 0;
   top: 0;
   padding-left: 50px;
-  padding-top: 450px;
+  /* padding-top: 450px; */
+  padding-top: 527px;
 }
 
 .btn {
@@ -143,7 +144,6 @@ ul {
 }
 
 /* NEW BUTTON (CHANGE NAME AFTER TO ^ ) */
-
 .button {
   background: var(--very-dark-cyan);
   border: none;
@@ -217,10 +217,14 @@ ul {
 }
 
 .tip {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* justify-content: space-between; */
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 5px;
-  grid-row-gap: 15px;
+  grid-row-gap: 15px; */
 }
 
 .tip__btn {
@@ -277,6 +281,27 @@ ul {
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (min-width: 400px) {
+  /* Medium screens */
+  .tip {
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 15px;
+    /* grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 15px; */
+  }
+
+  .people__icon {
+    padding-top: 450px;
+  }
+}
+
 
 @media (min-width: 480px) {
   /* Medium screens */

@@ -64,3 +64,5 @@ reset.addEventListener('click', () => {
 // SETUP TOTAL
 
 // onclick RESET... clear all inputs and reset variables
+
+// media query:
