@@ -15,11 +15,14 @@
 bill.addEventListener('keyup', calculate);
 custom.addEventListener('keyup', calculate);
 people.addEventListener('keyup', calculate);
+let userTip = 0;
 
 // calculate onclick on tip
 const tip = document.querySelectorAll('input[name="tip"]')
 for (let i=0; i<tip.length;i++) {
+  const tipsLabel = tip[i].closest('label');
   tip[i].onclick = () => {
+    custom.value = null;
     calculate();
   }
 }
@@ -32,9 +35,7 @@ function calculate() {
   reset.style.backgroundColor = 'var(--light-green)';
 
   // sort out selected tip...
-  let userTip = 0;
   let tipList = document.querySelector('input[name="tip"]');
-
   if (custom.value) {
     userTip = custom.value / 100;
   }
