@@ -21,8 +21,26 @@ const tip = document.querySelectorAll('input[name="tip"]')
 for (let i=0; i<tip.length;i++) {
   const tipsLabel = tip[i].closest('label');
   tip[i].onclick = () => {
+    // resets button to default color (only selected receive color change)
+    // buttons not selected are painted to their default colors
+    for (let i = 0; i < labels.length; i++) {
+        labels[i].style.color = 'white';
+        labels[i].style.backgroundColor = '#00494d';
+    }
+    // after all colors are painted default, clicked button is then changed to different color..
+    tipsLabel.style.color = 'white';
+    tipsLabel.style.background = '#26c2ad';
     custom.value = null;
     calculate();
+  }
+}
+
+// when custom tip clicked, reset tips to default color
+const labels = document.querySelectorAll('.button');
+custom.onclick = () => {
+  for (let i = 0; i < labels.length; i++) {
+      labels[i].style.color = 'white';
+      labels[i].style.backgroundColor = '#00494d';
   }
 }
 

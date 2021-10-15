@@ -164,10 +164,6 @@ ul {
   margin: 5px 0;
 }
 
-.button:hover {
-  background: #26c2ad;
-}
-
 /* make as class framework... */
 .button input {
   display: none;
