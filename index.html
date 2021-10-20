@@ -1,85 +1,72 @@
-<!--
-  DELETE THIS AFTER SEEN & IMPLEMENTED:
-  https://www.youtube.com/watch?v=rWjntaq4FW4
-  https://www.youtube.com/watch?v=bZM9ot4ulT8
- -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!-- process domain, load resource quicker before browser request -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <!-- process domain, load resource quicker before browser request -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
 
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <h1>SPLI<br>TTER</h1>
+    <section class="app">
+      <section class="form">
+        <label class="input" for="bill">Bill</label>
+        <input class="field field__bill" id="bill" name="bill" type="text" dir="rtl" type="text" placeholder="0" required>
 
-<body>
-  <!-- blue background -->
-  <h1>SPLI<br>TTER</h1>
-  <section class="app">
-    <!-- section1 -->
-    <!-- white background -->
-    <section class="form">
-      <!-- block w/in a block -->
-      <!-- section2 -->
-      <!-- contains bill, tip & people -->
-      <label class="input" for="bill">Bill</label>
-      <input class="field field__bill" id="bill" name="bill" type="text" dir="rtl" type="text" placeholder="0" required>
+        <!-- tip block -->
+        <section>
+          <label for="tip">Select Tip %</label>
+          <div class="tip">
+            <label for="5" class="button button--hover">5%&nbsp;<input id="5" name="tip" type="radio" placeholder="test" value="5"></label>
+            <label for="10" class="button button--hover">10%<input id="10" name="tip" type="radio" placeholder="test" value="10"></label>
+            <label for="15" class="button button--hover">15%<input id="15" name="tip" type="radio" placeholder="test" value="15"></label>
+            <label for="25" class="button button--hover">25%<input id="25" name="tip" type="radio" placeholder="test" value="25"></label>
+            <label for="50" class="button button--hover">50%<input id="50" name="tip" type="radio" placeholder="test" value="50"></label>
+            <label for="custom"><input id="custom" class="btn--input" type="text" placeholder="Custom"></label>
+          </div>
+        </section>
 
-      <section>
-        <!-- change this to its own block (tip) ^ -->
-        <label for="tip">Select Tip %</label>
-        <div class="tip">
-          <label for="5" class="button button--hover">5%&nbsp;<input id="5" name="tip" type="radio" placeholder="test" value="5"></label>
-          <label for="10" class="button button--hover">10%<input id="10" name="tip" type="radio" placeholder="test" value="10"></label>
-          <label for="15" class="button button--hover">15%<input id="15" name="tip" type="radio" placeholder="test" value="15"></label>
-          <label for="25" class="button button--hover">25%<input id="25" name="tip" type="radio" placeholder="test" value="25"></label>
-          <label for="50" class="button button--hover">50%<input id="50" name="tip" type="radio" placeholder="test" value="50"></label>
-          <label for="custom"><input id="custom" class="btn--input" type="text" placeholder="Custom"></label>
-        </div>
+        <!-- people block -->
+        <section class="people">
+          <label class="input" for="people">Number of People</label>
+          <input class="field field__people" id="people" dir="rtl" type="text" placeholder="0">
+        </section>
       </section>
 
-      <!-- people block -->
-      <section class="people">
-        <label class="input" for="people">Number of People</label>
-        <input class="field field__people" id="people" dir="rtl" type="text" placeholder="0">
+      <section class="display">
+        <section class="display__tip">
+          <div>
+            <h2>Tip Amount</h2>
+            <h3>/ person</h3>
+          </div>
+          <h3 id="tipAmount" class="display__value">0</h3>
+        </section>
+        <section class="display__people">
+          <div>
+            <h2>Total</h2>
+            <h3>/ person</h3>
+          </div>
+          <h3 id="totalAmount" class="display__value">0</h3>
+        </section>
+        <label for="reset"></label>
+        <input class="btn btn--empty" id="reset" type="button" value=RESET>
       </section>
     </section>
 
-    <section class="display">
-      <!-- display__tip should be container (display something... ) -->
-      <section class="display__tip">
-        <div>
-          <h2>Tip Amount</h2>
-          <h3>/ person</h3>
-        </div>
-        <h3 id="tipAmount" class="display__value">0</h3>
-      </section>
-      <section class="display__people">
-        <div>
-          <h2>Total</h2>
-          <h3>/ person</h3>
-        </div>
-        <h3 id="totalAmount" class="display__value">0</h3>
-      </section>
-      <label for="reset"></label>
-      <!-- <input class="btn btn--green" id="reset" type="button" value=RESET> -->
-      <input class="btn btn--empty" id="reset" type="button" value=RESET>
-    </section>
-  </section>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/j300-174">Jedd Picones</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://github.com/j300-174">Jedd Picones</a>.
-  </div>
-  <script src="script.js"></script>
-</body>
 </html>
