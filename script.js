@@ -9,7 +9,7 @@ custom.addEventListener("keyup", calculate);
 people.addEventListener("keyup", calculate);
 
 // calculate onclick on tip
-const tip = document.querySelectorAll("input[name=\"tip\"]");
+const tip = document.querySelectorAll("input[name='tip\']");
 
 for (let i = 0; i < tip.length; i++) {
   const tipsLabel = tip[i].closest("label");
@@ -52,8 +52,8 @@ function calculate() {
 
   if (custom.value) {
     userTip = custom.value / 100;
-  } else if (document.querySelector("input[name="tip"]:checked")) {
-    userTip = document.querySelector("input[name="tip"]:checked").value / 100;
+  } else if (document.querySelector("input[name='tip']:checked")) {
+    userTip = document.querySelector("input[name='tip']:checked").value / 100;
   }
 
   const tip = bill.value * userTip;
