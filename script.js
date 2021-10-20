@@ -49,8 +49,6 @@ function calculate() {
   reset.style.backgroundColor = "var(--light-green)";
 
   let userTip = 0;
-  const tip;
-  const total;
 
   if (custom.value) {
     userTip = custom.value / 100;
@@ -58,8 +56,8 @@ function calculate() {
     userTip = document.querySelector("input[name="tip"]:checked").value / 100;
   }
 
-  tip = bill.value * userTip;
-  total = parseFloat(bill.value) + tip;
+  const tip = bill.value * userTip;
+  const total = parseFloat(bill.value) + tip;
 
   tipAmount.innerHTML = `$${((tip / people.value) * 100) / 100}`;
   totalAmount.innerHTML = `$${((total / people.value) * 100) / 100}`;
