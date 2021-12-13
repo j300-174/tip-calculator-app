@@ -1,6 +1,6 @@
 # Tip calculator app
 
-## See the site [HERE](https://silly-benz-690a6e.netlify.app)
+## See the site [HERE](https://cranky-northcutt-afb796.netlify.app/)
 
 ![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
 
