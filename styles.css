@@ -45,7 +45,8 @@
 
   /* || Font sizes */
   --large-font-size: 24px;
-  --large-font-size-2: 30px; /* 34px */
+  --large-font-size-2: 30px;
+  /* 34px */
 
   /* || Radius */
   --border-radius: 0.25rem;
@@ -115,7 +116,7 @@ ul {
   background-image: url("./images/icon-person.svg");
 }
 
-.form__icon{
+.form__icon {
   position: absolute;
   left: 0;
   top: 0;
@@ -282,11 +283,18 @@ ul {
   color: var(--strong-cyan);
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
 
 @media (min-width: 400px) {
+
   /* Medium screens */
   .tip {
     /* display: flex;
@@ -298,6 +306,7 @@ ul {
 }
 
 @media (min-width: 540px) {
+
   /* Medium screens */
   .tip {
     grid-template-columns: 1fr 1fr 1fr;
@@ -305,6 +314,7 @@ ul {
 }
 
 @media (min-width: 800px) {
+
   /* Wide screens */
   /* split form & display classes */
   body {
