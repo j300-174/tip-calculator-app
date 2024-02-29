@@ -13,8 +13,9 @@ class Tips {
   activateEventListeners() {
     bill.addEventListener("keyup", this.calculateTipAmountAndTotal);
     custom.addEventListener("keyup", this.calculateTipAmountAndTotal);
+    // custom.addEventListener("onclick", this.resetLabels);
     people.addEventListener("keyup", this.calculateTipAmountAndTotal);
-    reset.addEventListener("click", this.resetTipInput);
+    reset.addEventListener("click", this.resetAll);
   }
 
   activateTipCalculator() {
@@ -39,7 +40,7 @@ class Tips {
 
   }
 
-  resetTipInput() {
+  resetAll() {
     bill.value = null;
     people.value = null;
     custom.value = null;
