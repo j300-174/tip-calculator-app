@@ -1,31 +1,40 @@
+/*
+  Tips
+  Props:
+*/
+class TipsColors {
+  constructor() {
+    this.darkBlue = "#00494d";
+    this.lightBlue = "#26c2ad";
+    this.white = "#FFFFFF";
+  }
+
+}
+
 class Tips {
-  colours = {
-    darkBlue: "#00494d",
-    lightBlue: "#26c2ad",
-    white: "#FFFFFF",
-  };
 
   constructor(tips, labels) {
     this.tip = tips;
     this.labels = labels;
+    this.colours = new TipsColors();
   }
 
   activateEventListeners() {
-    bill.addEventListener("keyup", this.calculateTipAmountAndTotal);
-    custom.addEventListener("keyup", this.calculateTipAmountAndTotal);
+    bill.addEventListener("keyup", this.handleUserInput);
+    custom.addEventListener("keyup", this.handleUserInput);
     // custom.addEventListener("onclick", this.resetLabels);
-    people.addEventListener("keyup", this.calculateTipAmountAndTotal);
+    people.addEventListener("keyup", this.handleUserInput);
     reset.addEventListener("click", this.resetAll);
+    return this;
   }
 
   activateTipCalculator() {
     this.activateEventListeners();
-
     for (let i = 0; i < this.tip.length; i++) {
       const tipsLabel = this.tip[i].closest("label");
       this.tip[i].onclick = () => {
         this.handleBtnColours(tipsLabel);
-        this.calculateTipAmountAndTotal();
+        this.handleUserInput();
       };
     }
 
@@ -50,13 +59,18 @@ class Tips {
     reset.style.backgroundColor = "#0d686d";
   }
 
+  // When user inputs via bill, no. people, selecting tip, method triggered
+  // method then sets styling
+  // when bill || no. people input || custom input, only change output display
+  // when select tip buttons clicked, handle custom, display, rest of buttons
 
-  calculateTipAmountAndTotal() {
-    function activateResetButtonStyling() {
+  handleUserInput() {
+    function activateResetButton() {
       reset.style.color = "var(--dark-green)";
       reset.style.backgroundColor = "var(--light-green)";
     }
-    activateResetButtonStyling();
+    //calc tip & total
+    activateResetButton();
 
     let userTip = 0;
 
@@ -77,6 +91,7 @@ class Tips {
   handleBtnColours(tipsLabel) {
     this.setToDefaultColour();
     this.setClickedColour(tipsLabel);
+    return this;
   }
 
   setToDefaultColour() {
